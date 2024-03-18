@@ -18,11 +18,12 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'admin',
             'email' => 'admin@admin.com',
-            'password' => bcrypt('password')
+            'password' => bcrypt('password'),
         ]);
 
         $this->call([
             DoctorSeeder::class,
+            ScheduleSeeder::class,
         ]);
     }
 }

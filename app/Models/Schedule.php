@@ -16,7 +16,7 @@ class Schedule extends Model
         'day',
         'start',
         'end',
-        'doctor_id'
+        'doctor_id',
     ];
 
     public function Doctor(): BelongsTo

@@ -21,11 +21,11 @@ class ScheduleFactory extends Factory
     public function definition(): array
     {
         return [
-            'polyclinic' => fake()->numberBetween(1,4),
+            'polyclinic' => fake()->numberBetween(1, 4),
             'day' => fake()->randomElement(['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']),
-            'start' => fake()->time('H:i'),
-            'end' => fake()->time('H:i'),
-            'doctor_id' => Doctor::all('id')->random()
+            'start' => '14:00',
+            'end' => '16:00',
+            'doctor_id' => Doctor::all('id')->random(),
         ];
     }
 }

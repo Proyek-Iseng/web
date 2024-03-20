@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('schedules', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->enum('polyclinic', [1, 2, 3, 4]);
-            $table->enum('day', ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]);
-            $table->time('start');
-            $table->time('end');
+            $table->enum('day', ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']);
+            $table->string('start');
+            $table->string('end');
             $table->foreignUuid('doctor_id')
                 ->nullable()
                 ->constrained()

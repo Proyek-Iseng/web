@@ -28,8 +28,8 @@ class Doctor extends Model
         ];
     }
 
-    public function schedules(): HasMany
+    public function timetables(): HasMany
     {
-        return $this->hasMany(Schedule::class);
+        return $this->hasMany(Timetable::class);
     }
 }

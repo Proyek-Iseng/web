@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             DoctorSeeder::class,
-            ScheduleSeeder::class,
+            TimetableSeeder::class,
         ]);
     }
 }

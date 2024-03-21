@@ -3,15 +3,15 @@
 namespace Database\Factories;
 
 use App\Models\Doctor;
-use App\Models\Schedule;
+use App\Models\Timetable;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Schedule>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Timetable>
  */
-class ScheduleFactory extends Factory
+class TimetableFactory extends Factory
 {
-    protected $model = Schedule::class;
+    protected $model = Timetable::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,7 @@ class ScheduleFactory extends Factory
     {
         return [
             'polyclinic' => fake()->numberBetween(1, 4),
-            'day' => fake()->randomElement(['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']),
+            'day' => fake()->randomElement(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']),
             'start' => '14:00',
             'end' => '16:00',
             'doctor_id' => Doctor::all('id')->random(),

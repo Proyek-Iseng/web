@@ -10,6 +10,7 @@
     "require": {
         "php": "^8.2",
         "cviebrock/eloquent-sluggable": "^11.0",
+        "f9webltd/laravel-api-response-helpers": "^2.0",
         "filament/filament": "^3.2",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9"
@@ -23,7 +24,8 @@
         "nunomaduro/collision": "^8.0",
         "pestphp/pest": "^2.34",
         "pestphp/pest-plugin-laravel": "^2.3",
-        "spatie/laravel-ignition": "^2.4"
+        "spatie/laravel-ignition": "^2.4",
+        "timwassenburg/laravel-service-generator": "^1.0"
     },
     "autoload": {
         "psr-4": {

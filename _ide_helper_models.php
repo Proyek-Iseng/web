@@ -47,6 +47,20 @@ namespace App\Models{
 /**
  * 
  *
+ * @method static \Database\Factories\PatientFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient findSimilarSlugs(string $attribute, array $config, string $slug)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient withUniqueSlugConstraints(\Illuminate\Database\Eloquent\Model $model, string $attribute, array $config, string $slug)
+ */
+	class Patient extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
  * @property string $id
  * @property string $polyclinic
  * @property string $day

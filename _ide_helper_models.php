@@ -47,11 +47,45 @@ namespace App\Models{
 /**
  * 
  *
+ * @property string $id
+ * @property string $name
+ * @property string $slug
+ * @property string $gender
+ * @property string $nik
+ * @property string $birth_place
+ * @property string $birth_date
+ * @property string $religion
+ * @property string $address
+ * @property string $phone
+ * @property string $marital_status
+ * @property string $education
+ * @property string $job
+ * @property string $citizen
+ * @property string $medical_record
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Database\Factories\PatientFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Patient findSimilarSlugs(string $attribute, array $config, string $slug)
  * @method static \Illuminate\Database\Eloquent\Builder|Patient newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Patient newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Patient query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereAddress($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereBirthDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereBirthPlace($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereCitizen($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereEducation($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereGender($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereJob($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereMaritalStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereMedicalRecord($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereNik($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereReligion($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Patient whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Patient withUniqueSlugConstraints(\Illuminate\Database\Eloquent\Model $model, string $attribute, array $config, string $slug)
  */
 	class Patient extends \Eloquent {}

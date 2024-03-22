@@ -12,19 +12,21 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('patients', function (Blueprint $table) {
-            $table->uuid()->primary();
+            $table->uuid('id')->primary();
             $table->string('name');
             $table->string('slug');
-            $table->enum('gender', ['male', 'female']);
-            $table->char('nik', 13)->default(9999999999999);
+            $table->enum('gender', ['Laki-laki', 'Perempuan']);
+            $table->char('nik', 16)->default(9999999999999999);
             $table->string('birth_place');
             $table->date('birth_date');
-            $table->enum('religion', ['Islam', 'Christian', 'Catholic', 'Hindu', 'Buddha', 'Confucian']);
+            $table->enum('religion', ['Islam', 'Kristen', 'Katolik', 'Hindu', 'Buddha', 'Konghucu']);
             $table->string('address');
             $table->string('phone');
-            $table->enum('marital_status', ['Single', 'Marry', 'Divorce', 'Death Divorce']);
+            $table->enum('marital_status', ['Belum Kawin', 'Kawin', 'Cerai Hidup', 'Cerai Mati']);
             $table->enum('education', ['Tidak Sekolah', 'SD', 'SLTP Sederajat', 'SLTA Sedajarat', 'D1-D3 Sederajat', 'D4', 'S1', 'S2', 'S3']);
-            
+            $table->enum('job', ['Tidak Bekerja', 'PNS', 'TNI/POLRI', 'BUMN', 'Pegawai Swasta/Wirausaha', 'Lain-lain']);
+            $table->enum('citizen', ['WNI', 'WNA']);
+            $table->char('medical_record', 6);
             $table->timestamps();
         });
     }

@@ -26,7 +26,7 @@ return new class extends Migration
             $table->enum('education', ['Tidak Sekolah', 'SD', 'SLTP Sederajat', 'SLTA Sedajarat', 'D1-D3 Sederajat', 'D4', 'S1', 'S2', 'S3']);
             $table->enum('job', ['Tidak Bekerja', 'PNS', 'TNI/POLRI', 'BUMN', 'Pegawai Swasta/Wirausaha', 'Lain-lain']);
             $table->enum('citizen', ['WNI', 'WNA']);
-            $table->char('medical_record', 6);
+            $table->char('medical_record', 6)->nullable();
             $table->timestamps();
         });
     }

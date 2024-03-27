@@ -6,6 +6,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Patient extends Model
 {
@@ -34,5 +35,9 @@ class Patient extends Model
                 'source' => 'name',
             ],
         ];
+    }
+
+    public function registrations() : HasMany {
+        return $this->hasMany(Registration::class);
     }
 }

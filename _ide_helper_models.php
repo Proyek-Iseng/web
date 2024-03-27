@@ -61,9 +61,11 @@ namespace App\Models{
  * @property string $education
  * @property string $job
  * @property string $citizen
- * @property string $medical_record
+ * @property string|null $medical_record
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Registration> $registrations
+ * @property-read int|null $registrations_count
  * @method static \Database\Factories\PatientFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Patient findSimilarSlugs(string $attribute, array $config, string $slug)
  * @method static \Illuminate\Database\Eloquent\Builder|Patient newModelQuery()
@@ -96,6 +98,42 @@ namespace App\Models{
  * 
  *
  * @property string $id
+ * @property int $registration_number
+ * @property string $registration_date
+ * @property int $status
+ * @property string $responsible_name
+ * @property string $responsible_phone
+ * @property int $user_id
+ * @property string $timetable_id
+ * @property string|null $confirmed_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Patient|null $patient
+ * @property-read \App\Models\Timetable $timetable
+ * @method static \Database\Factories\RegistrationFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|Registration newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Registration newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Registration query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Registration whereConfirmedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Registration whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Registration whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Registration whereRegistrationDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Registration whereRegistrationNumber($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Registration whereResponsibleName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Registration whereResponsiblePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Registration whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Registration whereTimetableId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Registration whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Registration whereUserId($value)
+ */
+	class Registration extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property string $id
  * @property string $polyclinic
  * @property string $day
  * @property string $start
@@ -104,6 +142,8 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Doctor|null $Doctor
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Registration> $registrations
+ * @property-read int|null $registrations_count
  * @method static \Database\Factories\TimetableFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Timetable newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Timetable newQuery()

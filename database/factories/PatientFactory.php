@@ -29,7 +29,7 @@ class PatientFactory extends Factory
             'education' => fake()->randomElement(['Tidak Sekolah', 'SD', 'SLTP Sederajat', 'SLTA Sedajarat', 'D1-D3 Sederajat', 'D4', 'S1', 'S2', 'S3']),
             'job' => fake()->randomElement(['Tidak Bekerja', 'PNS', 'TNI/POLRI', 'BUMN', 'Pegawai Swasta/Wirausaha', 'Lain-lain']),
             'citizen' => fake()->randomElement(['WNI', 'WNA']),
-            'medical_record' => fake()->randomNumber(6, true),
+            'medical_record' => fake()->randomElement([fake()->randomNumber(6, true), null]),
         ];
     }
 }

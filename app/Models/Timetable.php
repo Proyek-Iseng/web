@@ -20,7 +20,7 @@ class Timetable extends Model
         'doctor_id',
     ];
 
-    public function Doctor(): BelongsTo
+    public function doctor(): BelongsTo
     {
         return $this->belongsTo(Doctor::class);
     }

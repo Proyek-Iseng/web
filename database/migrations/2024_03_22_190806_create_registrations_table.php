@@ -18,7 +18,7 @@ return new class extends Migration
             $table->boolean('status')->default(false);
             $table->string('responsible_name');
             $table->string('responsible_phone');
-            $table->foreignId('user_id')
+            $table->foreignUuid('patient_id')
                 ->constrained()
                 ->cascadeOnDelete()
                 ->cascadeOnUpdate();

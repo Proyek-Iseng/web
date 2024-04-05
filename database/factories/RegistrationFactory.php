@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Patient;
 use App\Models\Registration;
 use App\Models\Timetable;
 use App\Models\User;
@@ -29,7 +30,7 @@ class RegistrationFactory extends Factory
             'status' => fake()->boolean(),
             'responsible_name' => fake()->name(),
             'responsible_phone' => fake()->phoneNumber(),
-            'user_id' => User::all('id')->random(),
+            'patient_id' => Patient::all('id')->random(),
             'timetable_id' => Timetable::all('id')->random(),
             'confirmed_at' => fake()->dateTime()
         ];

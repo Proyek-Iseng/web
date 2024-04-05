@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 
 class Doctor extends Model
 {
@@ -32,4 +33,8 @@ class Doctor extends Model
     {
         return $this->hasMany(Timetable::class);
     }
+
+    // public function registrations() : HasManyThrough {
+    //     return $this->hasManyThrough(Registration::class, Timetable::class);
+    // }
 }

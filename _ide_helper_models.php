@@ -141,7 +141,7 @@ namespace App\Models{
  * @property string|null $doctor_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Models\Doctor|null $Doctor
+ * @property-read \App\Models\Doctor|null $doctor
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Registration> $registrations
  * @property-read int|null $registrations_count
  * @method static \Database\Factories\TimetableFactory factory($count = null, $state = [])

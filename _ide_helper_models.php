@@ -103,12 +103,12 @@ namespace App\Models{
  * @property int $status
  * @property string $responsible_name
  * @property string $responsible_phone
- * @property int $user_id
+ * @property string $patient_id
  * @property string $timetable_id
  * @property string|null $confirmed_at
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Models\Patient|null $patient
+ * @property-read \App\Models\Patient $patient
  * @property-read \App\Models\Timetable $timetable
  * @method static \Database\Factories\RegistrationFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Registration newModelQuery()
@@ -117,6 +117,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Registration whereConfirmedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Registration whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Registration whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Registration wherePatientId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Registration whereRegistrationDate($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Registration whereRegistrationNumber($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Registration whereResponsibleName($value)
@@ -124,7 +125,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Registration whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Registration whereTimetableId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Registration whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Registration whereUserId($value)
  */
 	class Registration extends \Eloquent {}
 }
@@ -141,7 +141,7 @@ namespace App\Models{
  * @property string|null $doctor_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Models\Doctor|null $Doctor
+ * @property-read \App\Models\Doctor|null $doctor
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Registration> $registrations
  * @property-read int|null $registrations_count
  * @method static \Database\Factories\TimetableFactory factory($count = null, $state = [])

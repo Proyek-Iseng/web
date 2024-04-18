@@ -25,7 +25,7 @@ class Patient extends Model
         'education',
         'job',
         'citizen',
-        'madical_record',
+        'medical_record',
     ];
 
     public function sluggable(): array

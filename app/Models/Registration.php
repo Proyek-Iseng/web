@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Factories\BelongsToRelationship;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOneThrough;
 
 class Registration extends Model
 {
@@ -29,4 +31,8 @@ class Registration extends Model
     public function timetable() : BelongsTo {
         return $this->belongsTo(Timetable::class);
     }
+
+    // public function doctor() : HasOneThrough {
+    //     return $this->hasOneThrough(Doctor::class, Timetable::class);
+    // }
 }
